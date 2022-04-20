@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <ctype.h>
 
+// Alumno: Tao Lizarraga
+
 int main ()
 {
     char a;
