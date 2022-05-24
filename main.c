@@ -1,16 +1,21 @@
 #include <stdio.h>
 #include <ctype.h>
-
 // Alumno: Tao Lizarraga
 
 int main ()
 {
     char a;
-    while (a=getchar()) // acá me tira un warning por el -Wall, pero el programa funciona correctamente
+    while ((a=getchar()) != EOF) 
     {
-        if (isupper(a)) a = tolower(a);
-        else if (islower(a)) a = toupper(a);
-        if (!isdigit(a)) putchar (a);
+        if (isupper(a)){
+            putchar(tolower(a));
+        }
+        else if (islower(a)){
+            putchar(toupper(a));
+        }
+        else if (!isdigit(a)){
+            putchar (a);
+        } 
     }
     return 0;
 }
